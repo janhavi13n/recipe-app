@@ -1,0 +1,102 @@
+.recipeCard {
+  border: 2px solid #ff6a00;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  width: 220px;
+  cursor: pointer;
+}
+
+.recipeCard>img {
+  height: 200px;
+  width: 200px;
+}
+
+.recipeCard>p {
+  width: 90%;
+  margin: 0.5em;
+}
+
+.btn1 {
+  height: 31px;
+  font-weight: 500;
+  background-color: #ff6a00;
+  border-radius: 10px;
+  padding: 0 1em;
+  font-size: 17px;
+}
+
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(189, 189, 189, 0.9);
+  z-index: 2;
+}
+
+.modal-container {
+  padding: 2em;
+  width: 85vw;
+  max-width: 800px;
+  max-height: 90vh;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: white;
+  border-radius: 10px;
+  cursor: default;
+  overflow-y: scroll;
+}
+
+.section1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section1>img {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  padding: 10px 20px;
+}
+
+.headings>h4 {
+  color: #000 !important;
+}
+
+.headings>p {
+  margin-bottom: 5px !important;
+  font-weight: 500;
+} 
+
+.ingredientsTab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 5px;
+  width: 60%;
+}
+
+.ingredients {
+  text-align: left;
+
+
+  padding-left: 10px;
+  margin-bottom: 0 !important;
+}

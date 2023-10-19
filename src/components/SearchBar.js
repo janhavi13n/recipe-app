@@ -1,26 +1,28 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import '../styles/searchBar.css';
+import "../styles/searchBar.css";
 
-const SearchBar = ({ onChangeSearch, search }) => {
-    const arrow = "<"
+const SearchBar = ({ submitHandler, updateHandler, input }) => {
+  const arrow = "<<< ";
+
   return (
-    <div>
-      <div style={{ float: "left" }}>
-        <Link to="/">{arrow}</Link> 
-        Home
+    <>
+      <div className="fw-bold float-start">
+        <Link to="/">{arrow} Home</Link>
       </div>
-      <div>
-        <h4>Search easy recipes to cook at home here...</h4>
+      <h4>Search easy recipes to cook at home here...</h4>
+      <form onSubmit={submitHandler}>
         <input
-          onChange={onChangeSearch}
-          //value={search}
+          type="text"
+          value={input}
           placeholder="Enter recipe name..."
-          type="search"
-          style={{ width: "400px" }}
+          onChange={updateHandler}
+          style={{ width: "24em", marginLeft: "6em" }}
         />
-      </div>
-    </div>
+        <button className="btn1" onClick={submitHandler}>
+          Search
+        </button>
+      </form>
+    </>
   );
 };
 export default SearchBar;
