@@ -2,10 +2,16 @@ a {
     text-decoration: none !important;
     color: black !important;
 }
+h1 {
+    font-size: 18px !important;
+}
 
-h4 {
+h2 {
+    font-size: 22px !important;
     color:#ff6a00 !important;
-    
+}
+h4 {
+    color:#ff6a00 !important;  
 }
 
 .btn1 {

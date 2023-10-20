@@ -1,11 +1,11 @@
 import "../styles/page.css";
-import { HeartTwoTone } from "@ant-design/icons";
+import heart from "../assets/heartFill-icon.svg";
 
-export default function Recipe() {
+export default function Footer() {
   return (
     <div className="footer">
       Designed & developed by Janhavi&nbsp;
-      <HeartTwoTone twoToneColor="#ff6a00"/>
+      <img className="heartFill" src={heart} alt="heart-icon" />
     </div>
   );
 }

@@ -1,46 +1,47 @@
 import "../styles/recipe.css";
-import { CheckSquareTwoTone, CloseSquareTwoTone } from "@ant-design/icons";
+import check from "../assets/checkSquare-icon.svg";
+import uncheck from "../assets/xSquare-icon.svg";
 
-const RecipeCard = ({ recipe, hideRecipeInfo }) => {
-  console.log("IN Recipe Card", recipe, recipe.analyzedInstructions[0].steps);
+const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
+  console.log("IN Recipe modal", recipe);
   return (
     <>
       <div className="modal-wrapper"></div>
       <div className="modal-container">
-        <div className="section1">
+        <div className="d-flex flex-wrap section1">
           <img src={recipe.image} alt={recipe.title} />
-          <div className="headings">
+          <div className="d-flex flex-column align-items-start headings">
             <h4>{recipe.title}</h4>
             <p style={{ color: recipe.vegan ? "green" : "red" }}>
               Vegan :{" "}
               {recipe.vegan ? (
-                <CheckSquareTwoTone twoToneColor="#28cb28" />
-              ) : (
-                <CloseSquareTwoTone twoToneColor="red" />
+                <img src={check} alt="" />
+                ) : (
+                  <img src={uncheck} alt="" />
               )}
             </p>
             <p style={{ color: recipe.dairyFree ? "green" : "red" }}>
               Dairy Free :{" "}
               {recipe.dairyFree ? (
-                <CheckSquareTwoTone twoToneColor="#28cb28" />
-              ) : (
-                <CloseSquareTwoTone twoToneColor="red" />
+                <img src={check} alt="" />
+                ) : (
+                  <img src={uncheck} alt="" />
               )}
             </p>
             <p style={{ color: recipe.gutenFree ? "green" : "red" }}>
               Gluten Free :{" "}
               {recipe.gutenFree ? (
-                <CheckSquareTwoTone twoToneColor="#28cb28" />
-              ) : (
-                <CloseSquareTwoTone twoToneColor="red" />
+                <img src={check} alt="" />
+                ) : (
+                  <img src={uncheck} alt="" />
               )}
             </p>
             <p style={{ color: recipe.vegetarian ? "green" : "red" }}>
               Vegetarian :{" "}
               {recipe.vegetarian ? (
-                <CheckSquareTwoTone twoToneColor="#28cb28" />
+                <img src={check} alt="" />
               ) : (
-                <CloseSquareTwoTone twoToneColor="red" />
+                <img src={uncheck} alt="" />
               )}
             </p>
           </div>
@@ -70,4 +71,4 @@ const RecipeCard = ({ recipe, hideRecipeInfo }) => {
   );
 };
 
-export default RecipeCard;
+export default RecipeInfoModal;
