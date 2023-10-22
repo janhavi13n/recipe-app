@@ -14,7 +14,7 @@ h4 {
     color:#ff6a00 !important;  
 }
 
-.btn1 {
+.btnFH {
     height: 31px;
     font-weight: 500;
     background-color: #ff6a00;
@@ -22,4 +22,9 @@ h4 {
     padding: 0 1em;
     font-size: 17px;
     margin-left: 10px;
+}
+
+.content {
+    cursor: pointer;
+    margin-right: 1.5em;
 }

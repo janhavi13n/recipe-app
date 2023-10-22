@@ -1,4 +1,4 @@
-import "../styles/page.css";
+import "../styles/home.css";
 import heart from "../assets/heartFill-icon.svg";
 
 export default function Footer() {

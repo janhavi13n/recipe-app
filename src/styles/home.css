@@ -1,11 +1,36 @@
-.img {
-    height: 400px;
-    width: 400px;
-    border-radius: 40px;
+h1 {
+    font-size: 30px !important;
 }
 
-.qq {
+h2 {
+    font-size: 22px !important;
+}
+
+.homeContainer {
     background-color: beige;
+    margin: 10%;
+}
+
+.homepage {
+    margin: 10%;
+    padding: 2em;
+}
+
+.homepage {
+    @media (max-width: 1000px) { 
+        flex-wrap: wrap;
+    }
+}
+
+.first {
+    margin-right: 3em;
+}
+
+.first {
+    @media (max-width: 1000px) { 
+        margin-bottom: 1em;
+        margin-right: 0;
+    } 
 }
 
 .goBtn {
@@ -18,10 +43,39 @@
     font-size: 17px;
 }
 
-h1 {
-    font-size: 30px !important;
+.img {
+    height: 400px;
+    width: 400px;
+    border-radius: 40px;
 }
 
-h2 {
-    font-size: 22px !important;
+.img {
+    @media (max-width: 1200px) { 
+        height: 300px;
+        width: 300px;
+    }
+}
+.img {
+    @media (max-width: 1000px) { 
+        margin: auto;
+    }  
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1em;
+    font-weight: 500;
+}
+
+.recipePage {
+    margin: 3em 9em 5em;
+    padding: 2em;
+    background-color: beige;
 }

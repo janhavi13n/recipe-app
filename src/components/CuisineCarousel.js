@@ -5,8 +5,6 @@ import { useState } from "react";
 import "../styles/recipe.css";
 
 const CuisineCarousel = ({ getRecipesByCuisine }) => {
-  const [selected, setSelected] = useState("");
-
   const cuisine = [
     "Indian",
     "Chinese",
@@ -34,13 +32,38 @@ const CuisineCarousel = ({ getRecipesByCuisine }) => {
     "Korean",
   ];
 
-  // document.querySelector(".slick-arrow")?.style.color = "black";
+  const [selected, setSelected] = useState("");
+
+  const arrowStyles = {
+    background: "black",
+    borderRadius: "50%",
+    paddingTop: "1px",
+  };
+
+  const Arrow = (props) => {
+    const { className, onClick } = props;
+    let tooltipTxt = "";
+    if (props.className === "slick-arrow slick-prev") {
+      tooltipTxt = "Previous";
+    } else {
+      tooltipTxt = "Next";
+    }
+    return (
+      <div
+        className={className}
+        title={tooltipTxt}
+        style={arrowStyles}
+        onClick={onClick}
+      />
+    );
+  };
 
   const renderSlides = () =>
-    cuisine.map((e) => (
-      <div key={e}>
+    cuisine.map((e, index) => (
+      <div key={index}>
         <span
-          className="cuisine"
+          className="fw-bold cuisine"
+          title={e}
           onClick={() => {
             getRecipesByCuisine(e);
             setSelected(e);
@@ -54,7 +77,13 @@ const CuisineCarousel = ({ getRecipesByCuisine }) => {
   return (
     <>
       <div className="cuisineCarousel">
-        <Slider dots={true} slidesToShow={6} slidesToScroll={2}>
+        <Slider
+          dots={true}
+          slidesToShow={6}
+          slidesToScroll={2}
+          nextArrow={<Arrow />}
+          prevArrow={<Arrow />}
+        >
           {renderSlides()}
         </Slider>
       </div>

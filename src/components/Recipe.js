@@ -1,10 +1,10 @@
-import "../styles/recipe.css";
 import { useState, useEffect } from "react";
+import "../styles/recipe.css";
 import RecipeInfoModal from "./RecipeInfoModal";
-import heart from "../assets/heart-icon.svg";
-import heartFill from "../assets/heartFill-icon.svg";
 import bookmark from "../assets/bookmark-icon.svg";
 import bookmarkFill from "../assets/bookmarkFill-icon.svg";
+import heart from "../assets/heart-icon.svg";
+import heartFill from "../assets/heartFill-icon.svg";
 
 const Recipe = ({ data }) => {
   useEffect(() => {
@@ -36,38 +36,21 @@ const Recipe = ({ data }) => {
     }
   };
 
-  const bookmarkAddedRecipe = (id) => {
-    setIsBookmarked(true);
-    let bookmarkedRecipes = localStorage.getItem("bookmarkedRecipesIds");
-    bookmarkedRecipes = bookmarkedRecipes?.split(",");
-    bookmarkedRecipes = [...new Set(bookmarkedRecipes)];
-    bookmarkedRecipes.push(String(id));
-    localStorage.setItem("bookmarkedRecipesIds", String(bookmarkedRecipes));
+  const addRecipe = (name, id) => {
+    name === "bookmarkedRecipesIds" ? setIsBookmarked(true) : setIsFav(true);
+    let recipes = localStorage.getItem(name);
+    recipes = recipes?.split(",");
+    recipes = [...new Set(recipes)];
+    recipes.push(String(id));
+    localStorage.setItem(name, String(recipes));
   };
 
-  const bookmarkRemoveRecipe = (id) => {
-    setIsBookmarked(false);
-    let bookmarkedRecipes = localStorage.getItem("bookmarkedRecipesIds");
-    bookmarkedRecipes = bookmarkedRecipes?.split(",");
-    bookmarkedRecipes = bookmarkedRecipes.filter((i) => i !== String(id));
-    localStorage.setItem("bookmarkedRecipesIds", String(bookmarkedRecipes));
-  };
-
-  const likeRecipe = (id) => {
-    setIsFav(true);
-    var favRecipes = localStorage.getItem("likedRecipesIds");
-    favRecipes = favRecipes?.split(",");
-    favRecipes = [...new Set(favRecipes)];
-    favRecipes.push(String(id));
-    localStorage.setItem("likedRecipesIds", String(favRecipes));
-  };
-
-  const unlikeRecipe = (id) => {
-    setIsFav(false);
-    var favRecipes = localStorage.getItem("likedRecipesIds");
-    favRecipes = favRecipes?.split(",");
-    favRecipes = favRecipes.filter((i) => i !== String(id));
-    localStorage.setItem("likedRecipesIds", String(favRecipes));
+  const removeRecipe = (name, id) => {
+    name === "bookmarkedRecipesIds" ? setIsBookmarked(false) : setIsFav(false);
+    let recipes = localStorage.getItem(name);
+    recipes = recipes?.split(",");
+    recipes = recipes.filter((i) => i !== String(id));
+    localStorage.setItem(name, String(recipes));
   };
 
   const handleRecipeModal = () => {
@@ -79,33 +62,33 @@ const Recipe = ({ data }) => {
       <img src={data.image} alt={data.image}></img>
       <p>{data.title}</p>
       <div className="d-flex align-items-center justify-content-between w-100 cc">
-        <button className="btn1" onClick={handleRecipeModal}>
+        <button className="btnFH" title="View recipe" onClick={handleRecipeModal}>
           View
         </button>
         {isBookmarked ? (
           <img
             src={bookmarkFill}
-            alt="bookmarked"
-            onClick={() => bookmarkRemoveRecipe(data.id)}
+            alt="bookmarked" title="Remove from Bookmarks"
+            onClick={() => removeRecipe("bookmarkedRecipesIds", data.id)}
           />
         ) : (
           <img
             src={bookmark}
-            alt="not-bookmarked"
-            onClick={() => bookmarkAddedRecipe(data.id)}
+            alt="not-bookmarked" title="Add to Bookmarks"
+            onClick={() => addRecipe("bookmarkedRecipesIds", data.id)}
           />
         )}
         {isFav ? (
           <img
             src={heartFill}
-            alt="liked"
-            onClick={() => unlikeRecipe(data.id)}
+            alt="liked" title="Unlike recipe"
+            onClick={() => removeRecipe("likedRecipesIds", data.id)}
           />
         ) : (
           <img
             src={heart}
-            alt="not-liked"
-            onClick={() => likeRecipe(data.id)}
+            alt="not-liked" title="Like recipe"
+            onClick={() => addRecipe("likedRecipesIds", data.id)}
           />
         )}
       </div>
