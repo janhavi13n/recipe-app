@@ -1,10 +1,12 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useState } from "react";
 import "../styles/recipe.css";
 
-const CuisineCarousel = ({ getRecipesByCuisine }) => {
+const CuisineCarousel = ({ getRecipesByCuisine, windowSize }) => {
+  
+  let items = Math.floor(windowSize?.innerWidth/300);
+
   const cuisine = [
     "Indian",
     "Chinese",
@@ -14,25 +16,14 @@ const CuisineCarousel = ({ getRecipesByCuisine }) => {
     "Japanese",
     "Spanish",
     "Mexican",
-    "Vietnamese",
-    "Asian",
-    " African",
-    "British",
-    "Cajun",
-    "Caribbean",
+    "African",
     "European",
     "French",
     "German",
-    "Greek",
     "Irish",
-    "Jewish",
     "Mediterranean",
-    "Nordic",
-    "Southern",
     "Korean",
   ];
-
-  const [selected, setSelected] = useState("");
 
   const arrowStyles = {
     background: "black",
@@ -64,10 +55,7 @@ const CuisineCarousel = ({ getRecipesByCuisine }) => {
         <span
           className="fw-bold cuisine"
           title={e}
-          onClick={() => {
-            getRecipesByCuisine(e);
-            setSelected(e);
-          }}
+          onClick={() => getRecipesByCuisine(e)}
         >
           {e}
         </span>
@@ -78,8 +66,7 @@ const CuisineCarousel = ({ getRecipesByCuisine }) => {
     <>
       <div className="cuisineCarousel">
         <Slider
-          dots={true}
-          slidesToShow={6}
+          slidesToShow={items}
           slidesToScroll={2}
           nextArrow={<Arrow />}
           prevArrow={<Arrow />}
@@ -87,7 +74,6 @@ const CuisineCarousel = ({ getRecipesByCuisine }) => {
           {renderSlides()}
         </Slider>
       </div>
-      <h4>{selected}</h4>
     </>
   );
 };

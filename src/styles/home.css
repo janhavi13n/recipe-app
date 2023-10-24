@@ -1,9 +1,18 @@
-h1 {
-    font-size: 30px !important;
+.recipePage {
+    margin: 5em 7em;
+    padding: 2em;
+    background-color: beige;
 }
-
-h2 {
-    font-size: 22px !important;
+.recipePage {
+    @media (max-width: 1000px) { 
+        padding: 2em 1em;
+        margin: 4em;
+    }
+}
+.recipePage {
+    @media (max-width: 768px) { 
+        margin: 3em;
+    }
 }
 
 .homeContainer {
@@ -14,11 +23,13 @@ h2 {
 .homepage {
     margin: 10%;
     padding: 2em;
+    justify-content: space-between;
 }
 
 .homepage {
-    @media (max-width: 1000px) { 
+    @media (max-width: 1200px) { 
         flex-wrap: wrap;
+        justify-content: center !important;
     }
 }
 
@@ -49,15 +60,28 @@ h2 {
     border-radius: 40px;
 }
 
+
 .img {
     @media (max-width: 1200px) { 
-        height: 300px;
-        width: 300px;
-    }
+        margin: 1em;
+    }  
 }
 .img {
-    @media (max-width: 1000px) { 
-        margin: auto;
+    @media (max-width: 600px) { 
+        height: 350px;
+        width: 350px;
+    }  
+}
+.img {
+    @media (max-width: 500px) { 
+        height: 300px;
+        width: 300px;
+    }  
+}
+.img {
+    @media (max-width: 400px) { 
+        height: 250px;
+        width: 250px;
     }  
 }
 
@@ -74,8 +98,3 @@ h2 {
     font-weight: 500;
 }
 
-.recipePage {
-    margin: 3em 9em 5em;
-    padding: 2em;
-    background-color: beige;
-}

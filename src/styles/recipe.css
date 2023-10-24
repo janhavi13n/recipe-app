@@ -12,7 +12,6 @@
   cursor: pointer;
 }
 
-
 .recipeCard>img {
   height: 200px;
   width: 200px;
@@ -45,8 +44,8 @@
 .modal-container {
   padding: 2em;
   width: 85vw;
-  max-width: 800px;
-  max-height: 90vh;
+  max-height: 90%;
+  min-width: 300px;
   margin: auto;
   position: fixed;
   top: 0;
@@ -58,6 +57,24 @@
   border-radius: 10px;
   cursor: default;
   overflow-y: scroll;
+}
+
+.modal-container {
+  @media (min-width: 1000px) { 
+    max-width: 800px;
+  }
+}
+
+.modal-container {
+  @media (max-width: 999px) { 
+    max-width: calc(100vw - 100px);
+  }
+}
+
+.modal-container {
+  @media (max-width: 768px) { 
+    max-width: 90vw;
+  }
 }
 
 .section1 {
@@ -91,4 +108,16 @@
 
 .cuisine {
   cursor: pointer;
+}
+
+.cuisine {
+  @media (max-width: 768px) { 
+    font-size: small;
+  }
+}
+
+.cuisine {
+  @media (max-width: 500px) { 
+    font-size: x-small;
+  }
 }

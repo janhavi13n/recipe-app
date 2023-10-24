@@ -2,14 +2,54 @@ a {
     text-decoration: none !important;
     color: black !important;
 }
+
 h1 {
+    font-size: 30px !important;
+}
+
+.header1 {
+    @media (max-width: 900px) { 
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.firstH {
+    float: left;
+}
+
+.firstH h1 {
+    font-size: 24px !important;
+}
+
+.header1 h2 {
     font-size: 18px !important;
+    margin: 0;
+}
+
+.secondH {
+    margin: 1em 2em;
+}
+
+.recipeInput {
+    width: 22em;
+}
+.recipeInput {
+    @media (max-width: 500px) { 
+        width: 15em;
+    } 
+}
+.recipeInput {
+    @media (max-width: 500px) { 
+        width: 100%;
+    } 
 }
 
 h2 {
     font-size: 22px !important;
     color:#ff6a00 !important;
 }
+
 h4 {
     color:#ff6a00 !important;  
 }
@@ -21,10 +61,11 @@ h4 {
     border-radius: 10px;
     padding: 0 1em;
     font-size: 17px;
-    margin-left: 10px;
+    margin: 10px;
 }
 
 .content {
     cursor: pointer;
     margin-right: 1.5em;
 }
+

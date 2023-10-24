@@ -5,7 +5,7 @@ import foodpic from "../assets/foodpic.PNG";
 const Home = () => {
   return (
     <div className="homeContainer">
-      <div className="d-flex justify-content-between align-items-center homepage">
+      <div className="d-flex align-items-center homepage">
         <div className="d-flex justify-content-around flex-column align-items-center first">
           <div style={{textAlign:"left"}}>
             <h1>Welcome to FLAVOR HUB!</h1> 
@@ -20,9 +20,7 @@ const Home = () => {
             <Link to="/recipes">Go To Recipes</Link>
           </button>
         </div>
-        <div>
-          <img src={foodpic} className="img" />
-        </div>
+        <div><img src={foodpic} className="img" /></div>
       </div>
     </div>
   );
