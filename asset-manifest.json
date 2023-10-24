@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/recipe-app/static/css/main.df47a8fe.css",
+    "main.js": "/recipe-app/static/js/main.ce73b293.js",
+    "static/media/foodpic.PNG": "/recipe-app/static/media/foodpic.60b644cbd2a41da96de5.PNG",
+    "static/media/foodSpices.jpg": "/recipe-app/static/media/foodSpices.816789bd979ee4831181.jpg",
+    "static/media/healthyfood-icon.svg": "/recipe-app/static/media/healthyfood-icon.23234a74b5678ee0bcedf97face13157.svg",
+    "static/media/slick.svg": "/recipe-app/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/recipe-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/recipe-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/recipe-app/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/recipe-app/index.html",
+    "static/media/xSquare-icon.svg": "/recipe-app/static/media/xSquare-icon.1851033ed9c2818006bbd3d15a29cb7c.svg",
+    "static/media/heart-icon.svg": "/recipe-app/static/media/heart-icon.01032e985250f2421f5b1da305620acf.svg",
+    "static/media/checkSquare-icon.svg": "/recipe-app/static/media/checkSquare-icon.67ef988821bebeeea23b1ba5e57a100e.svg",
+    "static/media/bookmark-icon.svg": "/recipe-app/static/media/bookmark-icon.e4011a71c73486b6c93889029d364464.svg",
+    "static/media/bookmarkFill-icon.svg": "/recipe-app/static/media/bookmarkFill-icon.1bfbb93196631f6bade9185912d11084.svg",
+    "static/media/heartFill-icon.svg": "/recipe-app/static/media/heartFill-icon.a855cb81ced275f3f85c1db6d0337415.svg",
+    "main.df47a8fe.css.map": "/recipe-app/static/css/main.df47a8fe.css.map",
+    "main.ce73b293.js.map": "/recipe-app/static/js/main.ce73b293.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df47a8fe.css",
+    "static/js/main.ce73b293.js"
+  ]
+}
