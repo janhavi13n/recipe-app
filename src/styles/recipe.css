@@ -115,9 +115,3 @@
     font-size: small;
   }
 }
-
-.cuisine {
-  @media (max-width: 500px) { 
-    font-size: x-small;
-  }
-}

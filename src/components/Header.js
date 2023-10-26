@@ -13,7 +13,7 @@ const Header = ({
     <>
      <div className="d-flex justify-content-between header1">
         <div className="fw-bold firstH">
-          <Link to="/">
+          <Link to={process.env.PUBLIC_URL+"/"} >
             <img width="45em" src={flavorHubIcon} alt="FlavorHub" />
             <h1>Flavor Hub</h1>
           </Link>

@@ -17,7 +17,7 @@ const Home = () => {
             Let your culinary journey begin here!
           </div>
           <button type="button" className="goBtn" title="Go To Recipes">
-            <Link to="/recipes">Go To Recipes</Link>
+            <Link to={process.env.PUBLIC_URL+"/recipes"}>Go To Recipes</Link>
           </button>
         </div>
         <div><img src={foodpic} className="img" /></div>
