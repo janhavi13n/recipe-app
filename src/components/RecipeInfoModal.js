@@ -21,8 +21,8 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
                   <img src={uncheck} alt="" />
                 )}
               </p>
-              <p style={{ color: recipe.dairyFree ? "green" : "red" }}>
-                Dairy Free :{" "}
+              <p className="modal-txt" style={{ color: recipe.dairyFree ? "green" : "red" }}>
+                &nbsp;Dairy Free :{" "}
                 {recipe.dairyFree ? (
                   <img src={check} alt="" />
                 ) : (
@@ -40,8 +40,8 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
                   <img src={uncheck} alt="" />
                 )}
               </p>
-              <p style={{ color: recipe.vegetarian ? "green" : "red" }}>
-                Vegetarian :{" "}
+              <p className="modal-txt" style={{ color: recipe.vegetarian ? "green" : "red" }}>
+              &nbsp;Vegetarian :{" "}
                 {recipe.vegetarian ? (
                   <img src={check} alt="" />
                 ) : (
@@ -55,7 +55,7 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
         </div>
         {recipe.extendedIngredients?.length > 0 && (
           <>
-            <h4 className="text-start modal-title">Ingredients</h4>
+            <h4 className="text-start modal-txt">Ingredients</h4>
             <ol className="text-start">
               {recipe.extendedIngredients.map((q, ind) => (
                 <li key={ind}>{q.original}</li>
@@ -66,7 +66,7 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
 
         {recipe.analyzedInstructions[0] && (
           <>
-            <h4 className="text-start modal-title">Instructions</h4>
+            <h4 className="text-start modal-txt">Instructions</h4>
             <ol className="text-start">
               {recipe.analyzedInstructions[0].steps.map((q, ind) => (
                 <li key={ind}>{q.step}</li>
