@@ -11,9 +11,9 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
           <button className="clostBtn" title="Close" onClick={hideRecipeInfo}>x</button>
           <div className="d-flex flex-wrap section1">
             <img src={recipe.image} alt={recipe.title} />
-            <div className="d-flex flex-column align-items-start headings">
-              <h4>{recipe.title}</h4>
-              <div className="d-flex justify-content-between w-100">
+            <div className="d-flex flex-column align-items-start">
+              <h1>{recipe.title}</h1>
+              <div className="d-flex justify-content-between w-100 info">
                 {recipe.vegan !== undefined ? (
                   <p style={{ color: recipe.vegan ? "green" : "red" }}>
                     Vegan :{" "}
@@ -39,7 +39,7 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
                   ""
                 )}
               </div>
-              <div className="d-flex justify-content-between w-100">
+              <div className="d-flex justify-content-between w-100 info">
                 {recipe.gutenFree !== undefined ? (
                   <p style={{ color: recipe.gutenFree ? "green" : "red" }}>
                     Gluten Free :{" "}

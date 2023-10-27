@@ -55,6 +55,8 @@ const Recipe = ({ data }) => {
 
   const handleRecipeModal = () => {
     setShowRecipeInfo(!showRecipeInfo);
+    if (!showRecipeInfo) document.body.classList.add('overflow-hidden');
+    else document.body.classList.remove('overflow-hidden');
   };
 
   return (
