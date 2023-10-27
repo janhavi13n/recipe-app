@@ -44,8 +44,7 @@
 
 .modal-container {
   padding: 2em;
-  width: 85vw;
-  max-height: 90%;
+  max-height: 70%;
   width: 800px;
   margin: auto;
   position: fixed;
@@ -71,9 +70,18 @@
   }
 }
 
-.modal-content {
+.modal-content1 {
   height: 95%;
   overflow-y: scroll;
+}
+
+.clostBtn {
+  padding: 0px 6px 3px;
+  border: 1px solid #ff6a00;
+  border-radius: 7px;
+  position: absolute;
+  right: 2.5em;
+  margin-right: 5px;
 }
 
 .modal-footer {
@@ -82,7 +90,7 @@
   padding: 7px 0;
 }
 
-.modal-txt {
+.modal-container>p {
   margin-left: 8px;
 }
 

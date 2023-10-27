@@ -67,7 +67,7 @@ const CuisineCarousel = ({ getRecipesByCuisine, windowSize }) => {
       <div className="cuisineCarousel">
         <Slider
           slidesToShow={items}
-          slidesToScroll={2}
+          slidesToScroll={1}
           nextArrow={<Arrow />}
           prevArrow={<Arrow />}
         >
