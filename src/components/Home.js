@@ -20,7 +20,7 @@ const Home = () => {
             <Link to={process.env.PUBLIC_URL+"/recipes"}>Go To Recipes</Link>
           </button>
         </div>
-        <div><img src={foodpic} className="img" /></div>
+        <div><img src={foodpic} className="img" alt="food-picture"/></div>
       </div>
     </div>
   );

@@ -35,4 +35,8 @@ Make sure you fork it, to make your copy of the repo.
 And of course, this couldn't have been possible without the great _free to use_ API called, **Spoonacular API**. You can give that a look on [here](https://spoonacular.com/food-api).
 Their service has been amazing throughout and you can use their API to create your own projects too!
 
-Coded with 💖💖💖 by Janhavi Nagalkar
+## Live project link : https://janhavinagalkar.github.io/recipe-app
+
+
+
+Coded with 💖 by Janhavi Nagalkar

@@ -86,15 +86,12 @@
 }
 
 .footer {
-    position: fixed;
     bottom: 0;
     height: 40px;
     width: 100%;
     background-color: beige;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     padding: 0 1em;
     font-weight: 500;
+    font-size: 14px;
 }
 

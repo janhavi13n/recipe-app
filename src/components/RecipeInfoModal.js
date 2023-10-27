@@ -7,6 +7,7 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
     <>
       <div className="modal-wrapper"></div>
       <div className="modal-container">
+        <div className="modal-content">
         <div className="d-flex flex-wrap section1">
           <img src={recipe.image} alt={recipe.title} />
           <div className="d-flex flex-column align-items-start headings">
@@ -54,7 +55,7 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
         </div>
         {recipe.extendedIngredients?.length > 0 && (
           <>
-            <h4 className="text-start">Ingredients</h4>
+            <h4 className="text-start modal-title">Ingredients</h4>
             <ol className="text-start">
               {recipe.extendedIngredients.map((q, ind) => (
                 <li key={ind}>{q.original}</li>
@@ -65,17 +66,17 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
 
         {recipe.analyzedInstructions[0] && (
           <>
-            <h4 className="text-start">Instructions</h4>
+            <h4 className="text-start modal-title">Instructions</h4>
             <ol className="text-start">
               {recipe.analyzedInstructions[0].steps.map((q, ind) => (
                 <li key={ind}>{q.step}</li>
               ))}
             </ol>
           </>
-        )}
-        <button className="btnFH" title="Close" onClick={hideRecipeInfo}>
-          Close
-        </button>
+        )}</div>
+       <div className="modal-footer">
+          <button className="btnFH" title="Close" onClick={hideRecipeInfo}>Close</button>
+        </div> 
       </div>
     </>
   );
