@@ -3,7 +3,6 @@ import check from "../assets/checkSquare-icon.svg";
 import uncheck from "../assets/xSquare-icon.svg";
 
 const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
-  console.log(recipe.extendedIngredients);
   return (
     <>
       <div className="modal-wrapper"></div>
@@ -63,7 +62,7 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
               )}
             </div>
           </div>
-          
+
           {!!recipe.extendedIngredients &&
           recipe.extendedIngredients?.length > 0 ? (
             <>
