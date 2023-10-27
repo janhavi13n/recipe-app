@@ -14,55 +14,46 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
             <div className="d-flex flex-column align-items-start headings">
               <h4>{recipe.title}</h4>
               <div className="d-flex justify-content-between w-100">
-                {!!recipe.vegan ? (
-                  <p style={{ color: recipe.vegan ? "green" : "red" }}>
-                    Vegan :{" "}
-                    {recipe.vegan ? (
-                      <img src={check} alt="" />
-                    ) : (
-                      <img src={uncheck} alt="" />
-                    )}
-                  </p>
-                ) : ""}
-                {!!recipe.dairyFree ? (
-                  <p
-                    className="modal-txt"
-                    style={{ color: recipe.dairyFree ? "green" : "red" }}
-                  >
-                    &nbsp;Dairy Free :{" "}
-                    {recipe.dairyFree ? (
-                      <img src={check} alt="" />
-                    ) : (
-                      <img src={uncheck} alt="" />
-                    )}
-                  </p>
-                ) : ""}
+                <p style={{ color: recipe.vegan ? "green" : "red" }}>
+                  Vegan :{" "}
+                  {recipe.vegan ? (
+                    <img src={check} alt="" />
+                  ) : (
+                    <img src={uncheck} alt="" />
+                  )}
+                </p>
+                <p
+                  className="modal-txt"
+                  style={{ color: recipe.dairyFree ? "green" : "red" }}
+                >
+                  &nbsp;Dairy Free :{" "}
+                  {recipe.dairyFree ? (
+                    <img src={check} alt="" />
+                  ) : (
+                    <img src={uncheck} alt="" />
+                  )}
+                </p>
               </div>
-
               <div className="d-flex justify-content-between w-100">
-                {!!recipe.gutenFree ? (
-                  <p style={{ color: recipe.gutenFree ? "green" : "red" }}>
-                    Gluten Free :{" "}
-                    {recipe.gutenFree ? (
-                      <img src={check} alt="" />
-                    ) : (
-                      <img src={uncheck} alt="" />
-                    )}
-                  </p>
-                ) : ""}
-                {!!recipe.vegetarian ? (
-                  <p
-                    className="modal-txt"
-                    style={{ color: recipe.vegetarian ? "green" : "red" }}
-                  >
-                    &nbsp;Vegetarian :{" "}
-                    {recipe.vegetarian ? (
-                      <img src={check} alt="" />
-                    ) : (
-                      <img src={uncheck} alt="" />
-                    )}
-                  </p>
-                ) : ""}
+                <p style={{ color: recipe.gutenFree ? "green" : "red" }}>
+                  Gluten Free :{" "}
+                  {recipe.gutenFree ? (
+                    <img src={check} alt="" />
+                  ) : (
+                    <img src={uncheck} alt="" />
+                  )}
+                </p>
+                <p
+                  className="modal-txt"
+                  style={{ color: recipe.vegetarian ? "green" : "red" }}
+                >
+                  &nbsp;Vegetarian :{" "}
+                  {recipe.vegetarian ? (
+                    <img src={check} alt="" />
+                  ) : (
+                    <img src={uncheck} alt="" />
+                  )}
+                </p>
               </div>
 
               {!!recipe.readyInMinutes ? (
@@ -72,18 +63,21 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
               )}
             </div>
           </div>
+          
           {!!recipe.extendedIngredients &&
-            recipe.extendedIngredients?.length > 0 ? (
-              <>
-                <h4 className="text-start modal-txt">Ingredients</h4>
-                <ol className="text-start">
-                  {!!recipe.extendedIngredients &&
-                    recipe.extendedIngredients.map((q, ind) => (
-                      <li key={ind}>{q.original}</li>
-                    ))}
-                </ol>
-              </>
-            ) : ""}
+          recipe.extendedIngredients?.length > 0 ? (
+            <>
+              <h4 className="text-start modal-txt">Ingredients</h4>
+              <ol className="text-start">
+                {!!recipe.extendedIngredients &&
+                  recipe.extendedIngredients.map((q, ind) => (
+                    <li key={ind}>{q.original}</li>
+                  ))}
+              </ol>
+            </>
+          ) : (
+            ""
+          )}
 
           {!!recipe.analyzedInstructions && recipe.analyzedInstructions[0] ? (
             <>
@@ -94,7 +88,9 @@ const RecipeInfoModal = ({ recipe, hideRecipeInfo }) => {
                 ))}
               </ol>
             </>
-          ) : ""}
+          ) : (
+            ""
+          )}
         </div>
         <div className="modal-footer">
           <button className="btnFH" title="Close" onClick={hideRecipeInfo}>
