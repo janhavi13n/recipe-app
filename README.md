@@ -5,7 +5,7 @@
 
 Make sure you fork it, to make your copy of the repo.
 
-- `git clone https://github.com/janhavinagalkar/recipe-app.git`
+- `git clone https://github.com/janhavi13n/recipe-app.git`
 
 
 **Install the dependencies (using `npm` or `yarn`)**
